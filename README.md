@@ -2,9 +2,11 @@
 
 > npm install
 
-> sudo docker build -t node-proj -f Dockerfile . 
+> sudo docker build -t dev-repo -f Dockerfile . 
 
-> sudo docker push {AWS_ACCOUNT_ID}.dkr.ecr.{REGION}.amazonaws.com/node-proj
+> docker tag dev-repo:latest {AWS_ACCOUNT_ID}.dkr.ecr.{REGION}.amazonaws.com/dev-repo:latest
+
+> sudo docker push {AWS_ACCOUNT_ID}.dkr.ecr.{REGION}.amazonaws.com/dev-repo
 
 > aws ecr get-login
 
